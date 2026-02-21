@@ -17,7 +17,13 @@ connectDB();
 
 app.use(express.json());
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://https://task-manager-fullstack-rouge.vercel.app"
+  ],
+  credentials: true
+}));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/tasks', taskRoutes);
