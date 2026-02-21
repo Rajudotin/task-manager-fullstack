@@ -18,6 +18,7 @@ const connectDB = async () => {
     console.log("MySQL connected");
   } catch (error) {
     console.error("Database connection failed:", error.message);
+    console.error(error);
     process.exit(1);
   }
 };
