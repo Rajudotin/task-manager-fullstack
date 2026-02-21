@@ -1,18 +1,15 @@
-const { DataTypes } = require('sequelize');
-const { sequelize } = require('../config/database');
-const User = require('./User');
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../config/database");
 
-const Task = sequelize.define('Task', {
+const Task = sequelize.define("Task", {
   title: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  description: {
-    type: DataTypes.TEXT
+  completed: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
   }
 });
-
-User.hasMany(Task, { foreignKey: 'userId', onDelete: 'CASCADE' });
-Task.belongsTo(User, { foreignKey: 'userId' });
 
 module.exports = Task;
