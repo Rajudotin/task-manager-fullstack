@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://task-manager-fullstack-production-83d5.up.railway.app/api/v1"
+  baseURL: import.meta.env.VITE_API_URL
 });
 
 API.interceptors.request.use((req) => {
