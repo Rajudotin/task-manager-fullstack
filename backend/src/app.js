@@ -5,15 +5,10 @@ const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv').config();
 
-const { connectDB } = require('./config/database');
-require('./models');
-
 const authRoutes = require('./routes/authRoutes');
 const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
-
-connectDB();
 
 app.use(express.json());
 app.use(helmet());
