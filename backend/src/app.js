@@ -17,7 +17,10 @@ const allowedOrigins = [
   "https://task-manager-fullstack-rouge.vercel.app",
   "https://task-manager-fullstack-pfv2pvomo-rajus-projects-3ceb58b0.vercel.app",
   "https://task-manager-fullstack-rajus-projects-3ceb58b0.vercel.app",
-  "https://task-manager-fullstack-d74vuuhju-rajus-projects-3ceb58b0.vercel.app"
+  "https://task-manager-fullstack-d74vuuhju-rajus-projects-3ceb58b0.vercel.app",
+  "https://task-manager-fullstack-tawny.vercel.app",
+  "https://task-manager-fullstack-git-main-rajus-projects-3ceb58b0.vercel.app",
+  "https://task-manager-fullstack-669blzk4y-rajus-projects-3ceb58b0.vercel.app"
 ];
 
 app.use(cors({
